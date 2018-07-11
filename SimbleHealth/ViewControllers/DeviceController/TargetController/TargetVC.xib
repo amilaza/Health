@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TargetVC">
+            <connections>
+                <outlet property="imvSolar" destination="NHm-lz-9PA" id="BoU-wV-49h"/>
+                <outlet property="imvTarget" destination="dYl-6n-4Wx" id="694-xT-wPy"/>
+                <outlet property="imvTargetConstraint" destination="mpd-U9-lsO" id="f7C-Nf-l68"/>
+                <outlet property="lblSoFar" destination="mpc-kq-ct9" id="IAX-iQ-AIO"/>
+                <outlet property="lblSolarPercent" destination="KVt-1M-Kny" id="luj-h5-c6a"/>
+                <outlet property="lblTarget" destination="26h-EC-9Uf" id="Ycr-Ml-dB7"/>
+                <outlet property="lblTracking" destination="Wee-ez-k5R" id="Fh4-si-kgT"/>
+                <outlet property="lblTrackingPercent" destination="LsE-ag-Lbw" id="qbK-BE-SIG"/>
+                <outlet property="soFarConstraint" destination="XzQ-QL-f5V" id="ZAB-Ka-YgT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewSoFar" destination="JmJ-A6-ves" id="Lrs-Zx-Jft"/>
+                <outlet property="viewTracking" destination="ByI-ef-t5q" id="CC0-2V-ubf"/>
+                <outlet property="viewTrackingConstraint" destination="8Q6-JP-TjC" id="gRB-FW-uoj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DIt-Go-3XV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view key="tableHeaderView" contentMode="scaleToFill" id="CXF-Ni-nhN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="492"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8O-Ti-e5g" userLabel="View Date">
+                                <rect key="frame" x="72" y="32" width="230" height="162"/>
+                                <subviews>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOj-UR-UxB">
+                                        <rect key="frame" x="20" y="-5" width="30" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="BackwardIcon_orange"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="June 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uba-AZ-LMX">
+                                        <rect key="frame" x="50" y="-5" width="130" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                        <color key="textColor" red="0.86292403936386108" green="0.42399722337722778" blue="0.010921348817646503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_solar_panel" translatesAutoresizingMaskIntoConstraints="NO" id="NHm-lz-9PA">
+                                        <rect key="frame" x="75" y="40" width="80" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tar-pj-WLT">
+                                        <rect key="frame" x="180" y="-5" width="30" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="ForwardIcon_orange"/>
+                                        <state key="disabled" image="DisclosureIndicator_gray"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVt-1M-Kny">
+                                        <rect key="frame" x="45" y="122" width="140" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <color key="textColor" red="0.0041532423347234726" green="0.53708362579345703" blue="0.60072797536849976" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="Kn0-gd-gec"/>
+                                    <constraint firstAttribute="height" constant="162" id="x88-1s-EFj"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SO FAR: 310 kWh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpc-kq-ct9">
+                                <rect key="frame" x="29" y="295" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmJ-A6-ves">
+                                <rect key="frame" x="29" y="324" width="317" height="30"/>
+                                <color key="backgroundColor" red="0.043137254901960784" green="0.34901960784313724" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8he-x2-RcJ"/>
+                                    <constraint firstAttribute="width" constant="317" id="XzQ-QL-f5V"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRACKING: 370kWh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-ez-k5R">
+                                <rect key="frame" x="29" y="363" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByI-ef-t5q">
+                                <rect key="frame" x="29" y="392" width="342" height="30"/>
+                                <color key="backgroundColor" red="0.078431372549019607" green="0.53333333333333333" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="342" id="8Q6-JP-TjC"/>
+                                    <constraint firstAttribute="height" constant="30" id="EUk-Yh-Kyr"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your solar system is tracking 16% over target this month it has been especially sunny" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsE-ag-Lbw">
+                                <rect key="frame" x="12" y="432" width="351" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NDf-G2-Ejs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_target" translatesAutoresizingMaskIntoConstraints="NO" id="dYl-6n-4Wx">
+                                <rect key="frame" x="29" y="202" width="65" height="220"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="bkg-D8-gFX"/>
+                                    <constraint firstAttribute="height" constant="220" id="cSB-IK-kwl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="26h-EC-9Uf">
+                                <rect key="frame" x="29" y="202" width="65" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="SaT-Uq-aLn"/>
+                                </constraints>
+                                <string key="text">TARGET
+10kwh</string>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="JmJ-A6-ves" firstAttribute="top" secondItem="mpc-kq-ct9" secondAttribute="bottom" constant="8" id="2hi-FV-R9f"/>
+                            <constraint firstItem="p8O-Ti-e5g" firstAttribute="centerX" secondItem="CXF-Ni-nhN" secondAttribute="centerX" id="33y-iw-fV4"/>
+                            <constraint firstItem="26h-EC-9Uf" firstAttribute="top" secondItem="dYl-6n-4Wx" secondAttribute="top" id="7hJ-Yf-FpW"/>
+                            <constraint firstItem="ByI-ef-t5q" firstAttribute="top" secondItem="Wee-ez-k5R" secondAttribute="bottom" constant="8" id="8h6-AX-r28"/>
+                            <constraint firstItem="LsE-ag-Lbw" firstAttribute="leading" secondItem="CXF-Ni-nhN" secondAttribute="leading" constant="12" id="Bjx-gx-Nec"/>
+                            <constraint firstItem="ByI-ef-t5q" firstAttribute="leading" secondItem="CXF-Ni-nhN" secondAttribute="leading" constant="29" id="DsT-Lf-81y"/>
+                            <constraint firstItem="p8O-Ti-e5g" firstAttribute="top" secondItem="CXF-Ni-nhN" secondAttribute="top" constant="32" id="EYI-8F-8mp"/>
+                            <constraint firstItem="ByI-ef-t5q" firstAttribute="top" secondItem="JmJ-A6-ves" secondAttribute="bottom" constant="38" id="Mup-HH-MNj"/>
+                            <constraint firstItem="Wee-ez-k5R" firstAttribute="leading" secondItem="ByI-ef-t5q" secondAttribute="leading" id="Psf-6Z-sIB"/>
+                            <constraint firstItem="26h-EC-9Uf" firstAttribute="trailing" secondItem="dYl-6n-4Wx" secondAttribute="trailing" id="SBZ-oP-bZu"/>
+                            <constraint firstAttribute="bottom" secondItem="LsE-ag-Lbw" secondAttribute="bottom" id="ba2-8u-gCo"/>
+                            <constraint firstAttribute="trailing" secondItem="LsE-ag-Lbw" secondAttribute="trailing" constant="12" id="dTz-P1-JIc"/>
+                            <constraint firstItem="JmJ-A6-ves" firstAttribute="leading" secondItem="CXF-Ni-nhN" secondAttribute="leading" constant="29" id="e6t-iZ-LVN"/>
+                            <constraint firstItem="mpc-kq-ct9" firstAttribute="leading" secondItem="JmJ-A6-ves" secondAttribute="leading" id="fwe-D4-JtS"/>
+                            <constraint firstItem="LsE-ag-Lbw" firstAttribute="top" secondItem="ByI-ef-t5q" secondAttribute="bottom" constant="10" id="mnW-8y-aAi"/>
+                            <constraint firstItem="dYl-6n-4Wx" firstAttribute="leading" secondItem="CXF-Ni-nhN" secondAttribute="leading" constant="29" id="mpd-U9-lsO"/>
+                            <constraint firstItem="dYl-6n-4Wx" firstAttribute="bottom" secondItem="ByI-ef-t5q" secondAttribute="bottom" id="pfa-9d-cBl"/>
+                            <constraint firstItem="26h-EC-9Uf" firstAttribute="leading" secondItem="dYl-6n-4Wx" secondAttribute="leading" id="po2-PD-QS5"/>
+                        </constraints>
+                    </view>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DIt-Go-3XV" secondAttribute="trailing" id="3xS-d9-lNg"/>
+                <constraint firstAttribute="bottom" secondItem="DIt-Go-3XV" secondAttribute="bottom" id="KUJ-Fp-wXl"/>
+                <constraint firstItem="DIt-Go-3XV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QOa-T7-FKx"/>
+                <constraint firstItem="DIt-Go-3XV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sHg-97-Ckp"/>
+            </constraints>
+            <point key="canvasLocation" x="-1105" y="-857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BackwardIcon_orange" width="12" height="19"/>
+        <image name="DisclosureIndicator_gray" width="9" height="15"/>
+        <image name="ForwardIcon_orange" width="12" height="19"/>
+        <image name="ic_solar_panel" width="80" height="67"/>
+        <image name="ic_target" width="65" height="220"/>
+    </resources>
+</document>

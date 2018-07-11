@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GAContactUs">
+            <connections>
+                <outlet property="button_message" destination="3hd-Q5-cQf" id="YUu-xe-U5P"/>
+                <outlet property="constraint_textViewBottomMargin" destination="Di7-Tx-Qrk" id="wcL-4N-FBQ"/>
+                <outlet property="textView_contactMessage" destination="FxO-2L-v6A" id="saz-IE-2gV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR MESSAGE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deR-48-NWS">
+                    <rect key="frame" x="45" y="70" width="134" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="h4R-TV-zbh"/>
+                        <constraint firstAttribute="width" constant="134" id="rxI-ZE-xQc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write your message, question or issue -" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="FxO-2L-v6A">
+                    <rect key="frame" x="45" y="97" width="285" height="475"/>
+                    <color key="backgroundColor" red="0.36747530451574573" green="0.36747530451574573" blue="0.36747530451574573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJZ-kg-VZH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="xbH-Qg-uVp">
+                            <rect key="frame" x="12" y="11.5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="WU3-nV-lfx"/>
+                                <constraint firstAttribute="width" constant="35" id="xMZ-4R-VRX"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT US" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-es-qwm">
+                            <rect key="frame" x="107.5" y="18" width="160" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="160" id="mep-wO-eoQ"/>
+                                <constraint firstAttribute="height" constant="21" id="neM-WN-SmS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KZ-h5-KOi">
+                            <rect key="frame" x="325" y="10" width="40" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Tyu-qc-2Q1"/>
+                                <constraint firstAttribute="height" constant="47" id="vaP-TA-hIV"/>
+                            </constraints>
+                            <state key="normal" image="Grid">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonAction_menu:" destination="-1" eventType="touchUpInside" id="Uth-eE-wdX"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hd-Q5-cQf" customClass="MIBadgeButton">
+                            <rect key="frame" x="285" y="10" width="40" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="KCy-od-4Tk"/>
+                                <constraint firstAttribute="height" constant="47" id="rEC-WQ-ufp"/>
+                            </constraints>
+                            <state key="normal" image="email_noti">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonAction_alert:" destination="-1" eventType="touchUpInside" id="Ctg-87-4NE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="4KZ-h5-KOi" firstAttribute="top" secondItem="qJZ-kg-VZH" secondAttribute="top" constant="10" id="FsU-VR-8wJ"/>
+                        <constraint firstAttribute="trailing" secondItem="4KZ-h5-KOi" secondAttribute="trailing" constant="10" id="JcY-ZL-zVn"/>
+                        <constraint firstItem="zZe-es-qwm" firstAttribute="top" secondItem="qJZ-kg-VZH" secondAttribute="top" constant="18" id="LSr-wt-fFE"/>
+                        <constraint firstItem="3hd-Q5-cQf" firstAttribute="top" secondItem="qJZ-kg-VZH" secondAttribute="top" constant="10" id="R51-l5-ear"/>
+                        <constraint firstItem="xbH-Qg-uVp" firstAttribute="centerY" secondItem="zZe-es-qwm" secondAttribute="centerY" id="VcU-aQ-qj0"/>
+                        <constraint firstItem="4KZ-h5-KOi" firstAttribute="leading" secondItem="3hd-Q5-cQf" secondAttribute="trailing" id="Zl6-1Y-VJ1"/>
+                        <constraint firstAttribute="centerX" secondItem="zZe-es-qwm" secondAttribute="centerX" id="bTF-WK-0Hp"/>
+                        <constraint firstItem="xbH-Qg-uVp" firstAttribute="leading" secondItem="qJZ-kg-VZH" secondAttribute="leading" constant="12" id="cDy-im-uVR"/>
+                        <constraint firstAttribute="height" constant="57" id="g8v-Vh-Aad"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxY-z2-nzK">
+                    <rect key="frame" x="45" y="602" width="285" height="36"/>
+                    <color key="backgroundColor" red="0.36747530449999999" green="0.36747530449999999" blue="0.36747530449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="dPb-X8-YXt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                    <state key="normal" title="THANK YOU FOR MESSAGE"/>
+                    <connections>
+                        <action selector="buttonAction_thankYou:" destination="-1" eventType="touchUpInside" id="7ei-ZG-oHh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bxY-z2-nzK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="3V4-4I-xhf"/>
+                <constraint firstAttribute="bottom" secondItem="FxO-2L-v6A" secondAttribute="bottom" constant="95" id="Di7-Tx-Qrk"/>
+                <constraint firstItem="qJZ-kg-VZH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FYs-3B-QKI"/>
+                <constraint firstAttribute="bottom" secondItem="bxY-z2-nzK" secondAttribute="bottom" constant="29" id="IUr-LP-LY1"/>
+                <constraint firstItem="deR-48-NWS" firstAttribute="top" secondItem="qJZ-kg-VZH" secondAttribute="bottom" constant="13" id="OIP-Ha-Lj6"/>
+                <constraint firstItem="deR-48-NWS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="U2A-rP-Uzu"/>
+                <constraint firstItem="FxO-2L-v6A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="UHz-3T-p3m"/>
+                <constraint firstItem="qJZ-kg-VZH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wtb-4o-bxk"/>
+                <constraint firstAttribute="trailing" secondItem="bxY-z2-nzK" secondAttribute="trailing" constant="45" id="gap-Xr-ilk"/>
+                <constraint firstAttribute="trailing" secondItem="qJZ-kg-VZH" secondAttribute="trailing" id="nbg-Ok-r0h"/>
+                <constraint firstItem="FxO-2L-v6A" firstAttribute="top" secondItem="deR-48-NWS" secondAttribute="bottom" constant="10" id="ps1-Lo-gRs"/>
+                <constraint firstAttribute="trailing" secondItem="FxO-2L-v6A" secondAttribute="trailing" constant="45" id="xnv-0U-QES"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <point key="canvasLocation" x="41" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Grid" width="20" height="20"/>
+        <image name="email_noti" width="25" height="16"/>
+        <image name="ic_logo" width="35" height="35"/>
+    </resources>
+</document>

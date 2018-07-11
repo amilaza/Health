@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DevicePageController">
+            <connections>
+                <outlet property="button_allDevices" destination="STo-29-OkA" id="nGv-uu-3jn"/>
+                <outlet property="button_message" destination="qRf-kR-9Ik" id="9zs-YR-SsX"/>
+                <outlet property="containerView" destination="wdb-4A-xYq" id="v6U-BG-t91"/>
+                <outlet property="label_title" destination="Afm-b9-Svl" id="hYd-m5-j7v"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-7K-ekL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0D-Bp-zwn">
+                            <rect key="frame" x="325" y="10" width="40" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Rkb-Kk-UD3"/>
+                                <constraint firstAttribute="height" constant="47" id="iyN-qH-DBh"/>
+                            </constraints>
+                            <state key="normal" image="Grid">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonAction_menu:" destination="-1" eventType="touchUpInside" id="FbF-pE-Iei"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRf-kR-9Ik" customClass="MIBadgeButton">
+                            <rect key="frame" x="285" y="10" width="40" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="47" id="BwL-Nx-LNH"/>
+                                <constraint firstAttribute="width" constant="40" id="gGh-nt-k1l"/>
+                            </constraints>
+                            <state key="normal" image="email_noti">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonAction_alert:" destination="-1" eventType="touchUpInside" id="GfT-wq-gg9"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Afm-b9-Svl">
+                            <rect key="frame" x="90" y="10" width="195" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="47" id="oTB-lM-tEq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="7bZ-GS-ZbB">
+                            <rect key="frame" x="12" y="16" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="S49-uf-4Cg"/>
+                                <constraint firstAttribute="width" constant="35" id="z4F-3U-1iS"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="7bZ-GS-ZbB" firstAttribute="centerY" secondItem="Afm-b9-Svl" secondAttribute="centerY" id="7Ik-6b-pry"/>
+                        <constraint firstItem="j0D-Bp-zwn" firstAttribute="top" secondItem="cc2-7K-ekL" secondAttribute="top" constant="10" id="Gde-bB-X38"/>
+                        <constraint firstItem="j0D-Bp-zwn" firstAttribute="leading" secondItem="qRf-kR-9Ik" secondAttribute="trailing" id="RvC-MR-LHq"/>
+                        <constraint firstItem="Afm-b9-Svl" firstAttribute="leading" secondItem="cc2-7K-ekL" secondAttribute="leading" constant="90" id="W6K-gB-fNk"/>
+                        <constraint firstItem="qRf-kR-9Ik" firstAttribute="top" secondItem="cc2-7K-ekL" secondAttribute="top" constant="10" id="ebq-fH-7wF"/>
+                        <constraint firstItem="Afm-b9-Svl" firstAttribute="top" secondItem="cc2-7K-ekL" secondAttribute="top" constant="10" id="gUG-Lh-69p"/>
+                        <constraint firstAttribute="height" constant="57" id="iId-aY-t9w"/>
+                        <constraint firstAttribute="trailing" secondItem="Afm-b9-Svl" secondAttribute="trailing" constant="90" id="osI-lu-ZCR"/>
+                        <constraint firstItem="7bZ-GS-ZbB" firstAttribute="leading" secondItem="cc2-7K-ekL" secondAttribute="leading" constant="12" id="wTW-UQ-Ddf"/>
+                        <constraint firstAttribute="trailing" secondItem="j0D-Bp-zwn" secondAttribute="trailing" constant="10" id="zeT-FC-0Ry"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdb-4A-xYq">
+                    <rect key="frame" x="0.0" y="60" width="375" height="563"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STo-29-OkA">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="rDk-la-enc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="All Devices" image="ArrowIcon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" image="ArrowIcon"/>
+                    <connections>
+                        <action selector="buttonAction_allDevices:" destination="-1" eventType="touchUpInside" id="Z2r-Cd-yH0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cc2-7K-ekL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GjQ-4R-cCU"/>
+                <constraint firstAttribute="trailing" secondItem="STo-29-OkA" secondAttribute="trailing" id="Idv-An-8vo"/>
+                <constraint firstItem="STo-29-OkA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qr4-3d-hVH"/>
+                <constraint firstItem="wdb-4A-xYq" firstAttribute="top" secondItem="cc2-7K-ekL" secondAttribute="bottom" constant="3" id="Quj-Wg-4XP"/>
+                <constraint firstAttribute="trailing" secondItem="cc2-7K-ekL" secondAttribute="trailing" id="R7b-tI-6BU"/>
+                <constraint firstAttribute="bottom" secondItem="STo-29-OkA" secondAttribute="bottom" id="Yij-K0-tqx"/>
+                <constraint firstItem="cc2-7K-ekL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eOF-TG-lVg"/>
+                <constraint firstItem="STo-29-OkA" firstAttribute="top" secondItem="wdb-4A-xYq" secondAttribute="bottom" id="hxJ-DX-2sd"/>
+                <constraint firstItem="wdb-4A-xYq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s8z-7b-NDm"/>
+                <constraint firstAttribute="trailing" secondItem="wdb-4A-xYq" secondAttribute="trailing" id="w24-UV-acn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <point key="canvasLocation" x="-60" y="70"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ArrowIcon" width="12" height="20"/>
+        <image name="Grid" width="20" height="20"/>
+        <image name="email_noti" width="25" height="16"/>
+        <image name="ic_logo" width="35" height="35"/>
+    </resources>
+</document>
