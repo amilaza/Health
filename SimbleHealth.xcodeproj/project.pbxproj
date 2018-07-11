@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		127044A114A66BCC66CB9039 /* Pods_SimbleHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876170D67552DB12C5BECB0B /* Pods_SimbleHealth.framework */; };
+		16615CAA20F5E1120009A248 /* apple.cer in Resources */ = {isa = PBXBuildFile; fileRef = 16615CA820F5E1120009A248 /* apple.cer */; };
+		16615CAB20F5E1120009A248 /* dist.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 16615CA920F5E1120009A248 /* dist.p12 */; };
+		16615CAD20F5E2890009A248 /* dist.cer in Resources */ = {isa = PBXBuildFile; fileRef = 16615CAC20F5E2890009A248 /* dist.cer */; };
 		3670561A1F42B4B900845A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 367056191F42B4B900845A90 /* main.m */; };
 		3670561D1F42B4B900845A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3670561C1F42B4B900845A90 /* AppDelegate.m */; };
 		367056201F42B4B900845A90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3670561F1F42B4B900845A90 /* ViewController.m */; };
@@ -195,6 +198,11 @@
 /* Begin PBXFileReference section */
 		030DA6E46A884A0CE9F6DAA1 /* Pods-SimbleHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimbleHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimbleHealthUITests/Pods-SimbleHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		157C9AAC2A7028D6A3118AC4 /* Pods-SimbleHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimbleHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimbleHealth/Pods-SimbleHealth.release.xcconfig"; sourceTree = "<group>"; };
+		16615CA620F5C5250009A248 /* add-key.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "add-key.sh"; sourceTree = "<group>"; };
+		16615CA720F5C5560009A248 /* remove-key.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "remove-key.sh"; sourceTree = "<group>"; };
+		16615CA820F5E1120009A248 /* apple.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = apple.cer; sourceTree = "<group>"; };
+		16615CA920F5E1120009A248 /* dist.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dist.p12; sourceTree = "<group>"; };
+		16615CAC20F5E2890009A248 /* dist.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = dist.cer; sourceTree = "<group>"; };
 		3519EA24923FB0EB827B5B4C /* Pods-SimbleHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimbleHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimbleHealth/Pods-SimbleHealth.debug.xcconfig"; sourceTree = "<group>"; };
 		367056151F42B4B900845A90 /* SimbleHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimbleHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367056191F42B4B900845A90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -513,6 +521,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16615CA520F5C4D60009A248 /* scripts:travis */ = {
+			isa = PBXGroup;
+			children = (
+				16615CAC20F5E2890009A248 /* dist.cer */,
+				16615CA820F5E1120009A248 /* apple.cer */,
+				16615CA920F5E1120009A248 /* dist.p12 */,
+				16615CA620F5C5250009A248 /* add-key.sh */,
+				16615CA720F5C5560009A248 /* remove-key.sh */,
+			);
+			path = "scripts:travis";
+			sourceTree = "<group>";
+		};
 		3670560C1F42B4B900845A90 = {
 			isa = PBXGroup;
 			children = (
@@ -545,6 +565,7 @@
 		367056171F42B4B900845A90 /* SimbleHealth */ = {
 			isa = PBXGroup;
 			children = (
+				16615CA520F5C4D60009A248 /* scripts:travis */,
 				367057421F42B6A800845A90 /* ViewControllers */,
 				3670561B1F42B4B900845A90 /* AppDelegate.h */,
 				3670561C1F42B4B900845A90 /* AppDelegate.m */,
@@ -1335,7 +1356,7 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 787H57B8N5;
 						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					3670562D1F42B4B900845A90 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1381,6 +1402,7 @@
 				367057011F42B65900845A90 /* Roboto-ThinItalic.ttf in Resources */,
 				367057BB1F42B6A800845A90 /* MotionDetectorViewController.xib in Resources */,
 				36A61CA21F6919E800E507A3 /* BuildingCell.xib in Resources */,
+				16615CAD20F5E2890009A248 /* dist.cer in Resources */,
 				367059921F42D04500845A90 /* LICENSE in Resources */,
 				367057A51F42B6A800845A90 /* BudgetViewController.xib in Resources */,
 				367057001F42B65900845A90 /* Roboto-Thin.ttf in Resources */,
@@ -1399,6 +1421,7 @@
 				367057B31F42B6A800845A90 /* SmokeCell.xib in Resources */,
 				367057BF1F42B6A800845A90 /* PerformanceViewController.xib in Resources */,
 				367057A91F42B6A800845A90 /* GAMyDevicesVC.xib in Resources */,
+				16615CAB20F5E1120009A248 /* dist.p12 in Resources */,
 				367057C31F42B6A800845A90 /* RightnowViewController.xib in Resources */,
 				367056F81F42B65900845A90 /* Roboto-Bold.ttf in Resources */,
 				367057071F42B65900845A90 /* RobotoCondensed-Regular.ttf in Resources */,
@@ -1429,6 +1452,7 @@
 				367056F61F42B65900845A90 /* Roboto-Black.ttf in Resources */,
 				367056FB1F42B65900845A90 /* Roboto-Light.ttf in Resources */,
 				367057C51F42B6A800845A90 /* TargetVC.xib in Resources */,
+				16615CAA20F5E1120009A248 /* apple.cer in Resources */,
 				367057CD1F42B6A800845A90 /* GAMenuVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1853,12 +1877,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 787H57B8N5;
 				INFOPLIST_FILE = SimbleHealth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = simble.SimbleHealth.product.inHouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6f2945a2-5642-4e23-b2a3-502f390bb683";
+				PROVISIONING_PROFILE_SPECIFIER = "New SimbleHealth Product InHouse";
 				SWIFT_OBJC_BRIDGING_HEADER = "SimbleHealth/SimbleHealth-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1871,12 +1899,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 787H57B8N5;
 				INFOPLIST_FILE = SimbleHealth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = simble.SimbleHealth.product.inHouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6f2945a2-5642-4e23-b2a3-502f390bb683";
+				PROVISIONING_PROFILE_SPECIFIER = "New SimbleHealth Product InHouse";
 				SWIFT_OBJC_BRIDGING_HEADER = "SimbleHealth/SimbleHealth-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
