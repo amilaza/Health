@@ -1,0 +1,8 @@
+language: objective-c
+xcode_workspace: SimbleHealth.xcworkspace # path to your xcodeproj folder
+xcode_scheme: SimbleHealth
+xcode_sdk: iphonesimulator11.3
+osx_image: xcode9.4
+
+script:
+  - xcodebuild clean build -sdk iphonesimulator -workspace PhotoMemories.xcworkspace -scheme PhotoMemories CODE_SIGNING_REQUIRED=NO
